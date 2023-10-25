@@ -1,0 +1,38 @@
+.greeting-section {
+    
+    box-shadow: 0 0 3px -2px #858585;
+    padding-inline: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.triangle-1 {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    width: 100%;
+    height: 50px;
+}
+
+.triangle-2 {
+    position: absolute;
+    right: 0;
+    background-color: var(--brand-secondary);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    width: 100%;
+    height: 50px;
+}
+
+.Welcome {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--brand-secondary);
+    padding-top: 50px;
+}
+
+.welcome-paragraph {
+    font-weight: 200;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,29 @@
+.search-section {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 0 3px -1px #858585;
+    margin: 30px 50px;
+    background-color: var(--bg-default);
+}
+
+.select-container {
+    width: 50%;
+    height: 55px;
+    box-shadow: 0 0 5px -2px #858585;
+    padding: 0 5px;
+}
+
+.search-input{
+    width: 100%;
+}
+
+@media only screen and (min-width: 912px) {
+    .search-input {
+        width: 70%;
+    }
+
+    .select-container {
+        width: 15%;
+    }
+}

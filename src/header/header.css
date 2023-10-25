@@ -1,0 +1,18 @@
+.background-light{
+    background-color: var(--bg-default);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px -2px var(--lines-color);
+    padding: 0 50px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 800;
+    padding-block: 15px;
+    color: var(--brand-primary);
+}
