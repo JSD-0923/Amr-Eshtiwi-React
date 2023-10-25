@@ -1,6 +1,7 @@
 import { Box, Rating } from '@mui/material'
 import React from 'react'
 import './TopicInfo.css'
+import TopicInfoCard from '../TopicInfoCard/TopicInfoCard'
 
 function TopicInfo() {
     return (
@@ -17,6 +18,8 @@ function TopicInfo() {
                     how it should be displayed on a web page, including text, images, and multimedia. HTML is essential
                     for creating static web pages and is a foundational technology for the World Wide Web.</p>
             </div>
+
+            <TopicInfoCard/>
         </div>
     )
 }
