@@ -1,20 +1,25 @@
 import React from 'react';
 import './button.css'
 import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material';
+
+
+
+function Btn({name,icon,onClick, isFav}) {
+    const theme = useTheme();
 
 const style = {
     marginLeft: '2px',
     border: '1px solid rgb(209, 209, 209)',
     color: 'black',
-    background: 'none',
+    background: isFav ? theme.palette.secondary.main :'none',
     fontWeight: 200,
     fontSize: '12px',
-    textTransform:'none'
+    textTransform:'none',
+    color:isFav ? '#FFFFFF' :theme.palette.text.main,
 }
-
-function Btn({name,icon}) {
     return (
-        <Button size="small" variant="outlined" type="normal" startIcon={icon} sx={style}>
+        <Button size="small" variant="outlined" type="normal" startIcon={icon} sx={style} onClick={onClick}>
             {name}
         </Button>
     )

@@ -1,11 +1,13 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Rating, Typography } from '@mui/material'
+import { Box, Card, CardActionArea, CardContent, CardMedia, Rating, Typography, useTheme } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 function CustomeCard({id}) {
     let url = "/details/"+id;
+    const theme = useTheme();
+
     return (
-        <Card sx={{ maxWidth: 300 }}>
+        <Card sx={{ maxWidth: 300, backgroundColor: theme.palette.default.main, color: theme.palette.text.main}}>
             <CardActionArea component={Link} to={url}>
                 <CardMedia
                     component="img"
