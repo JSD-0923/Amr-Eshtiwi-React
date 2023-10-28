@@ -12,7 +12,7 @@ function CustomeCard({id}) {
                 <CardMedia
                     component="img"
                     style={{ height: "180px", }}
-                    image={require('../static/images/css.webp')}
+                    image={require('../../static/images/ajax.gif')}
                     alt="ajax"
                 />
                 <CardContent>

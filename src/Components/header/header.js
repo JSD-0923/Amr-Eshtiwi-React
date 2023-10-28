@@ -3,10 +3,13 @@ import Btn from '../button/button';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { useTheme } from '@mui/material';
+import { useContext } from 'react';
+import ThemeContext from '../../Context/ThemeContext';
 
 
-function Header({toggleTheme}) {
+function Header() {
     const theme = useTheme();
+    const toggleTheme = useContext(ThemeContext)
 
     return (
         <header style={{backgroundColor: theme.palette.default.main}}>
