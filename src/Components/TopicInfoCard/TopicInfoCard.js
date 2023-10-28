@@ -10,7 +10,7 @@ function TopicInfoCard() {
     return (
         <div class="topic-card" style={{backgroundColor: theme.palette.default.main , color: theme.palette.text.main}}>
             <div class="topic-card-image">
-                <img src="../static/images/ajax.gif" width="100%" height="100%"/>
+                <img src="../../../static/images/ajax.gif" width="100%" height="100%"/>
             </div>
             <div class="topic-card-content text-light">
                 <span class="title-auther"><strong>HTML</strong> by <a href="#">Sarah Smith</a></span>

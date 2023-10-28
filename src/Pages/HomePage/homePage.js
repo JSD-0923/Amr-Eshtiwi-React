@@ -1,6 +1,6 @@
 import React from 'react'
-import SearchContainer from '../searchContainer/searchContainer'
-import TopicsCard from '../TopicsCards/topicCard'
+import SearchContainer from '../../Components/searchContainer/searchContainer'
+import TopicsCard from '../../Components/TopicsCards/topicCard'
 
 function HomePage() {
     return (
