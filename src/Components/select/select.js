@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './select.css'
 import { FormControl, FormHelperText, MenuItem, Select, useTheme } from '@mui/material'
 
-function CustomSelect({ label, selectValues }) {
-    const [value, setValue] = useState('');
+function CustomSelect({ label, selectValues,value ,handleChange}) {
+    // const [value, setValue] = useState('');
 
-    const handleChange = (event) => {
-        setValue(event.target.value);
-    }
+    // const handleChange = (event) => {
+    //     setValue(event.target.value);
+    // }
 
     const theme = useTheme();
     return (
@@ -25,7 +25,7 @@ function CustomSelect({ label, selectValues }) {
                     <em>Defult</em>
                 </MenuItem>
                 {selectValues.map((value) => {
-                    return (<MenuItem value={value} sx={{ backgroundColor: theme.palette.body.main, color: theme.palette.text.main }} >{value}</MenuItem>)
+                    return (<MenuItem key={Math.random()} value={value} sx={{ backgroundColor: theme.palette.body.main, color: theme.palette.text.main }} >{value}</MenuItem>)
                 })}
             </Select>
         </FormControl>

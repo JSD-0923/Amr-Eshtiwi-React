@@ -3,28 +3,20 @@ import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutli
 import './SubTopics.css'
 import { useTheme } from '@mui/material';
 
-function SubTopics() {
+function SubTopics({ topic }) {
     const theme = useTheme();
 
     return (
-        <div class="sub-topic-container" >
-            <div class="sub-topics" style={{backgroundColor: theme.palette.default.main, color: theme.palette.text.main}}>
-                <h1 class="text-light">HTML Sub Topics</h1>
-                <div class="sub-topic"><CheckCircleOutlineOutlinedIcon sx={{color: theme.palette.secondary.main}}/>
-                    <p class="sub-topic-title text-light">HTML syntax and structure</p>
-                </div>
-                <div class="sub-topic"><CheckCircleOutlineOutlinedIcon sx={{color: theme.palette.secondary.main}}/>
-                    <p class="sub-topic-title text-light">HTML element and attribute</p>
-                </div>
-                <div class="sub-topic"><CheckCircleOutlineOutlinedIcon sx={{color: theme.palette.secondary.main}}/>
-                    <p class="sub-topic-title text-light">HTML forms and input elements</p>
-                </div>
-                <div class="sub-topic"><CheckCircleOutlineOutlinedIcon sx={{color: theme.palette.secondary.main}}/>
-                    <p class="sub-topic-title text-light">HTML multimedia elements (audio,video,images)</p>
-                </div>
-                <div class="sub-topic"><CheckCircleOutlineOutlinedIcon sx={{color: theme.palette.secondary.main}}/>
-                    <p class="sub-topic-title text-light">HTML accessability and semantic markup</p>
-                </div>
+        <div className="sub-topic-container" >
+            <div className="sub-topics" style={{ backgroundColor: theme.palette.default.main, color: theme.palette.text.main }}>
+                <h1 className="text-light">{topic.topic} Sub Topics</h1>
+                {topic.subtopics?.map((subTopic) => {
+                    return (
+                        <div key={Math.random()} className="sub-topic"><CheckCircleOutlineOutlinedIcon sx={{ color: theme.palette.secondary.main }} />
+                            <p className="sub-topic-title text-light">{subTopic}</p>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     )

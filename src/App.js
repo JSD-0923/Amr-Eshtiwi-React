@@ -1,15 +1,8 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import HomePage from './Pages/HomePage/homePage';
-import Header from './Components/header/header';
-import Welcome from './Components/welcome/welcome';
-import { Button, CssBaseline, ThemeProvider, createTheme, useTheme } from '@mui/material';
-import ErrorPage from './Pages/errorPage/errorPage';
-import DetailsPage from './Pages/DetailsPage/DetailsPage';
-import { createContext, useMemo, useState } from 'react';
-import Btn from './Components/button/button';
+import { CssBaseline, ThemeProvider, createTheme} from '@mui/material';
+import {useState } from 'react';
 import { router } from './Components/router/router';
-import Layout from './Components/Layout/Layout';
 import ThemeContext from './Context/ThemeContext';
 
 
