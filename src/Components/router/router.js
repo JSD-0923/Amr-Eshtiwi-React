@@ -8,6 +8,7 @@ import DetailsPage from '../../Pages/DetailsPage/DetailsPage';
 export const router = createBrowserRouter([
     {
         element: <Layout/>,
+        errorElement: <ErrorPage/>,
         children:[
             {
                 path: "/",

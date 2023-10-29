@@ -2,8 +2,8 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Rating, Typography, 
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function CustomeCard({id}) {
-    let url = "/details/"+id;
+function CustomeCard({topic}) {
+    let url = "/details/"+topic.id;
     const theme = useTheme();
 
     return (
@@ -12,25 +12,25 @@ function CustomeCard({id}) {
                 <CardMedia
                     component="img"
                     style={{ height: "180px", }}
-                    image={require('../../static/images/ajax.gif')}
+                    image={require('../../static/images/'+topic.image)}
                     alt="ajax"
                 />
                 <CardContent>
 
                     <Typography gutterBottom variant="p">
-                        Web Development Languages
+                        {topic.topic}
                     </Typography>
 
                     <Typography variant="h6" sx={{ fontWeight: 'bold', fontSize: 16 }}>
-                        CSS
+                        {topic.category}
                     </Typography>
 
                     <Box>
-                        <Rating name="half-rating-read" defaultValue={3.5} precision={0.5} readOnly sx={{ marginBlock: 2 }} />
+                        <Rating name="half-rating-read" value={topic.rating} defaultValue={3.5} precision={0.5} readOnly sx={{ marginBlock: 2 }} />
                     </Box>
 
                     <Typography variant="p">
-                        Author: Sarah Smith
+                        Author: {topic.name}
                     </Typography>
 
                 </CardContent>

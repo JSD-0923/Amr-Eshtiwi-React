@@ -13,8 +13,8 @@ function Header() {
 
     return (
         <header style={{backgroundColor: theme.palette.default.main}}>
-            <h1 class="title" style={{color: theme.palette.primary.main}}>Web Topics</h1>
-            <div class="buttons">
+            <h1 className="title" style={{color: theme.palette.primary.main}}>Web Topics</h1>
+            <div className="buttons">
                 <Btn name={'Dark Mode'} icon={<DarkModeOutlinedIcon sx={{color:theme.palette.text.main}} />} onClick={toggleTheme}/>
                 <Btn name={'Favouites'} icon={<FavoriteBorderOutlinedIcon sx={{color:theme.palette.text.main}} />} />
             </div>

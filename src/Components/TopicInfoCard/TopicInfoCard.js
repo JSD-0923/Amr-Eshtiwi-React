@@ -4,20 +4,20 @@ import Btn from '../button/button'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { useTheme } from '@mui/material';
 
-function TopicInfoCard() {
+function TopicInfoCard({topic}) {
     const theme = useTheme();
 
     return (
-        <div class="topic-card" style={{backgroundColor: theme.palette.default.main , color: theme.palette.text.main}}>
-            <div class="topic-card-image">
-                <img src="../../../static/images/ajax.gif" width="100%" height="100%"/>
+        <div className="topic-card" style={{backgroundColor: theme.palette.default.main , color: theme.palette.text.main}}>
+            <div className="topic-card-image">
+                <img src={require(`../../static/images/${topic.image}`)} alt={topic.topic} width="100%" height="100%"/>
             </div>
-            <div class="topic-card-content text-light">
-                <span class="title-auther"><strong>HTML</strong> by <a href="#">Sarah Smith</a></span>
-                <div class="add-favourties-container">
+            <div className="topic-card-content text-light">
+                <span className="title-auther"><strong>{topic.topic}</strong> by <a href="http://localhost:3000/">{topic.name}</a></span>
+                <div className="add-favourties-container">
                     <p>Interested about this topic?</p>
                     <Btn name={'Add to Favourites'} icon={<FavoriteBorderOutlinedIcon/>} isFav={true}/>
-                    <p class="credits">Unlimited Credits</p>
+                    <p className="credits">Unlimited Credits</p>
                 </div>
             </div>
         </div>

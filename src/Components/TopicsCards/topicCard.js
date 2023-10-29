@@ -2,14 +2,15 @@ import React from 'react'
 import CustomeCard from '../card/card'
 import './topicCard.css'
 
-function TopicsCard() {
+function TopicsCard({topics}) {
     return (
         <div className='topics-card'>
-            <CustomeCard id={1}/>
-            <CustomeCard id={2}/>
-            <CustomeCard id={3}/>
-            <CustomeCard id={4}/>
-            <CustomeCard id={5}/>
+            {topics.length === 0 ?
+                <span>There is no topics</span> : 
+                topics.map((topic) => {
+                    return <CustomeCard key={topic.id} topic={topic} />
+                })
+            }
         </div>
     )
 }
